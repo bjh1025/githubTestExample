@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>201910105</title>
+  <!-- CSS 초기화 -->
+  <link href="https://unpkg.com/ress/dist/ress.min.css" rel="stylesheet" type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <script type="text/javascript"></script>
+  <div id="home" class='intro_bjh'>
+    <header class="page-header wrapper">
+      <h1><a href="index.html"><img class='logo' src="test1.png" alt="과제테스트"></a></h1>
+      <nav>
+        <ul class='main-nav'>
+          <li><a href="home.html">순위 확인</a></li>
+          <li><a href="batting.html">Cloud</a></li>
+          <li><a href="batting.html">Computing</a></li>
+          <li><a href="batting.html">Test</a></li>
+          <li><a href="aplus4.html">html</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="main_button">
+      <button id="main_btn1" class="main_btn1">세부 검색 조건 설정</button>
+      <button id="main_btn2" class="main_btn2" onClick="location.href='random.html'">조합 추천 기능</button>
+      <table border="0" class="table1">
+        <thead>
+          <tr>
+            <td>마감시간</td>
+            <td>리그유형</td>
+            <td>게임유형</td>
+            <td>홈팀:원정팀</td>
+            <td>경기 일시</td>
+            <td>홈 승 선택</td>
+            <td>무승부 선택</td>
+            <td>홈 패 선택</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2022.12.26 21:00</td>
+            <td>프리미어리그</td>
+            <td>승무패</td>
+            <td>브렌트포드 vs 토트넘</td>
+            <td>2022.12.26 21:30</td>
+            <td><input type="button" onclick="add1(); btnDisabled1(); deleteList1();" id="btn3" value="승 2.35">
+            <td><input type="button" onclick="add2(); btnDisabled1(); deleteList1();" id="btn4" value="무 3.15">
+            <td><input type="button" onclick="add3(); btnDisabled1(); deleteList1();" id="btn5" value="패 1.70">
+              <script type="text/javascript" src="batting.js"></script>
+          </tr>
+          <tr>
+            <td>2022.12.26 21:50</td>
+            <td>프리미어리그</td>
+            <td>승무패</td>
+            <td>사우샘프턴 vs 브라이턴</td>
+            <td>2022.12.27 00:00</td>
+            <td><input type="button" onclick="add4(); btnDisabled2(); deleteList2();" id="btn6" value="승 2.50">
+            <td><input type="button" onclick="add5(); btnDisabled2(); deleteList2();" id="btn7" value="무 2.95">
+            <td><input type="button" onclick="add6(); btnDisabled2(); deleteList2();" id="btn8" value="패 2.10">
+              <script type="text/javascript" src="batting.js"></script>
+          </tr>
+          <tr>
+            <td>2022.12.26 21:50</td>
+            <td>프리미어리그</td>
+            <td>승무패</td>
+            <td>레스터시티 vs 뉴캐슬</td>
+            <td>2022.12.27 00:00</td>
+            <td><input type="button" onclick="add7(); btnDisabled3(); deleteList3();" id="btn9" value="승 2.40">
+            <td><input type="button" onclick="add8(); btnDisabled3(); deleteList3();" id="btn10" value="무 3.10">
+            <td><input type="button" onclick="add9(); btnDisabled3(); deleteList3();" id="btn11" value="패 1.90">
+              <script type="text/javascript" src="batting.js"></script>
+          </tr>
+          <tr>
+            <td>2022.12.26 21:50</td>
+            <td>프리미어리그</td>
+            <td>승무패</td>
+            <td>크리스털 팰리스 vs 풀럼</td>
+            <td>2022.12.27 00:00</td>
+            <td><input type="button" onclick="add10(); btnDisabled4(); deleteList4();" id="btn12" value="승 2.15">
+            <td><input type="button" onclick="add11(); btnDisabled4(); deleteList4();" id="btn13" value="무 2.80">
+            <td><input type="button" onclick="add12(); btnDisabled4(); deleteList4();" id="btn14" value="패 2.30">
+              <script type="text/javascript" src="batting.js"></script>
+          </tr>
+          <tr>
+            <td>2022.12.26 21:50</td>
+            <td>프리미어리그</td>
+            <td>승무패</td>
+            <td>에버턴 vs 울버햄튼 </td>
+            <td>2022.12.27 00:00</td>
+            <td><input type="button" onclick="add13(); btnDisabled5(); deleteList5();" id="btn15" value="승 1.90">
+            <td><input type="button" onclick="add14(); btnDisabled5(); deleteList5();" id="btn16" value="무 2.90">
+            <td><input type="button" onclick="add15(); btnDisabled5(); deleteList5();" id="btn17" value="패 2.50">
+              <script type="text/javascript" src="batting.js"></script>
+          </tr>
+          <tr>
+            <td>2022.12.26 21:50</td>
+            <td>프리미어리그</td>
+            <td>승무패</td>
+            <td>애스턴 빌라 vs 리버풀</td>
+            <td>2022.12.27 02:30</td>
+            <td><input type="button" onclick="add16(); btnDisabled6(); deleteList6();" id="btn18" value="승 4.50">
+            <td><input type="button" onclick="add17(); btnDisabled6(); deleteList6();" id="btn19" value="무 3.35">
+            <td><input type="button" onclick="add18(); btnDisabled6(); deleteList6();" id="btn20" value="패 1.40">
+              <script type="text/javascript" src="batting.js"></script>
+          </tr>
+          <tr>
+            <td>2022.12.26 21:50</td>
+            <td>프리미어리그</td>
+            <td>승무패</td>
+            <td>아스널 vs 웨스트햄</td>
+            <td>2022.12.27 05:00</td>
+            <td><input type="button" onclick="add19(); btnDisabled7(); deleteList7();" id="btn21" value="승 1.80">
+            <td><input type="button" onclick="add20(); btnDisabled7(); deleteList7();" id="btn22" value="무 3.35">
+            <td><input type="button" onclick="add21(); btnDisabled7(); deleteList7();" id="btn23" value="패 3.70">
+              <script type="text/javascript" src="batting.js"></script>
+          </tr>
+          <tr>
+            <td>2022.12.27 21:50</td>
+            <td>프리미어리그</td>
+            <td>승무패</td>
+            <td>첼시 vs 본머스</td>
+            <td>2022.12.28 02:30</td>
+            <td><input type="button" onclick="add22(); btnDisabled8(); deleteList8();" id="btn24" value="승 1.40">
+            <td><input type="button" onclick="add23(); btnDisabled8(); deleteList8();" id="btn25" value="무 3.50">
+            <td><input type="button" onclick="add24(); btnDisabled8(); deleteList8();" id="btn26" value="패 4.15">
+              <script type="text/javascript" src="batting.js"></script>
+
+          </tr>
+          <tr>
+            <td>2022.12.27 21:50</td>
+            <td>프리미어리그</td>
+            <td>승무패</td>
+            <td>맨체스터 유나이티드 vs 노팅엄 포레스트</td>
+            <td>2022.12.28 05:00</td>
+            <td><input type="button" onclick="add25(); btnDisabled9(); deleteList9();" id="btn27" value="승 1.60">
+            <td><input type="button" onclick="add26(); btnDisabled9(); deleteList9();" id="btn28" value="무 3.35">
+            <td><input type="button" onclick="add27(); btnDisabled9(); deleteList9();" id="btn29" value="패 4.10">
+              <script type="text/javascript" src="batting.js"></script>
+          </tr>
+          <tr>
+            <td>2022.12.28 21:50</td>
+            <td>프리미어리그</td>
+            <td>승무패</td>
+            <td>리즈 유나이티드 vs 맨체스터 시티</td>
+            <td>2022.12.29 05:00</td>
+            <td><input type="button" onclick="add28(); btnDisabled10(); deleteList10();" id="btn30" value="승 6.10">
+            <td><input type="button" onclick="add29(); btnDisabled10(); deleteList10();" id="btn31" value="무 5.10">
+            <td><input type="button" onclick="add30(); btnDisabled10(); deleteList10();" id="btn32" value="패 1.30">
+              <script type="text/javascript" src="batting.js"></script>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table2">
+        <form>
+          <thead>
+            <tr>
+              <td colspan="2">선택 목록</td>
+            </tr>
+          </thead>
+          <tbody class="select_list">
+            <tr>
+              <td>
+                <div id='a'>
+                  <ul></ul>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+          <td><input type="button" onclick="ratehap()" ; value="배당률 계산하기"></td>
+          <tr>
+            <td>예상 배당률<input type="text" id="totalrate" value="          ->"></td>
+          </tr>
+          <tr>
+            <td>희망 배팅금액:<input type="text" id="invest"></td>
+          </tr>
+          <tr>
+            <td><input type="button" onclick="getmoney()" ; value="예상 당첨금 확인"></td>
+          </tr>
+          <tr>
+            <td>예상 당첨금액:<input type="text" id="daebak"></td>
+          </tr>
+          <tr>
+            <td><button id="pay_btn" class="pay_btn">결제</button>
+          </tr>
+        </form>
+      </table>
+</body>
+
+</html>
