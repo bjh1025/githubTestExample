@@ -1,0 +1,160 @@
+/* 공통 적용 css */
+body { /* 전체 화면 */
+    line-height: 1.5;
+    background-image: url("bgimg1.jpg");
+}
+a { /* 클릭하면 링크 넘어가는 태그 */
+    text-decoration: none; /* 원래 생기는 밑줄을 없애기 */
+}
+img {
+    max-width: 100%; /* 이미지가 부모요소보다 커지는 것 방지 */
+}
+ 
+/***** Header (index.html) *****/
+.logo { /* WCB cafe 로고 이미지 */
+    width: 210px;
+    margin-top: 14px;
+}
+ 
+.main-nav {
+    display: flex; /* 가로 정렬 */
+    list-style: none; /*li점 없애기 */
+    font-size: 1.25rem; /* rem:웹 브라우저 기본 글씨크기(16px) */
+    text-transform: uppercase; /* 알파벳 대문자로 변환 */
+    margin-top: 15px;  
+    width: 1000px; /* 추가1 */
+    border-top: 1px solid white;
+    justify-content: space-around; /* 추가2 */
+}
+
+.main-nav a {
+    color: white;
+}
+.main-nav a:hover { /* 마우스를 올리면 */
+    color: #0bd;
+}
+ 
+/* 로고와 nav메뉴를 가로로 정렬하기 */
+.page-header {
+    background-color: rgb(255, 143, 135);
+    display: flex;
+    justify-content: space-between; /* 서로 균등하게 여백주기 */
+}
+/* 로고와 nav메뉴를 화면 가운데 정렬 */
+.wrapper {  
+    max-width: 1500px;
+    margin: 0 auto; /* 여백의 위아래는 0, 좌우는 자동 */
+    padding: 0 4%; /* 화면 크기에 맞춰 좌우 안쪽여백 4% */
+}
+.home-content p {
+    font-size: 1.2rem; /*기본 글자크기 x 1.2*/
+    margin: 10px 0 40px 0; /* 여백: 위(10) 오른쪽(0) 아래(40) 왼쪽(0) */ 
+}
+
+.main_btn1{
+    text-align: center;
+    font-weight: bold;
+    width:400px;
+    height:80px;
+    background-color:rgb(39, 204, 163);
+    color: white;
+    box-shadow: 0 4px
+    16px rgb(0,79,255,0.3);
+    font-size: 20px;
+    margin-left: 20%;
+    margin-top:3%;
+}
+.main_btn2{
+    text-align: center;
+    font-weight: bold;
+    width:400px;
+    height:80px;
+    background-color:rgb(39, 204, 163);
+    color: white;
+    box-shadow: 0 4px
+    16px rgb(0,79,255,0.3);
+    font-size: 20px;
+    margin-right: 30%;
+    margin-top:3%;
+}
+
+table{
+    background-color: rgb(255, 244, 244);
+    text-align: center;
+    font-weight: bold;
+    border-top: solid 1.5px black;
+    width:1000px;
+    height: 700px;
+    margin-left:15%;
+    margin-top:1%;
+    }
+td{
+    border:1px solid #000;
+    text-align:center;
+    height:20px
+}
+.table2{
+    border-top: solid 1.5px black;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;  
+    width:300px;
+    height:100px;
+    top: 100px;
+    right: 150px;
+    font-size: 18px;
+}
+
+.select_list{
+    height:600px;
+}
+.final_list{
+    height:100px;
+}
+.pay_btn{
+    background-color: limegreen;
+    width:50px;
+    color: white;
+    border: none;
+}
+li {
+    list-style:1;
+    margin: 15px 0;
+    float:right;
+    max-width:250px;
+    width:100%
+}
+
+.intro_bjh {
+    background-size: cover; /* 이미지 가로-세로 비율을 유지하며 화면에 채우기 */
+    background-position: center top;
+    background-repeat: no-repeat; /* 혹시 화면이 엄청크면 타일처럼 반복되는 이미지가 되지 않게 */
+}
+ 
+/* 화면이 500px보다 작을때 index.html 반응형 적용 */
+@media screen and (max-width: 500px) { /* 화면 가로길이가 500px보다 작으며 */
+    .page-header { /* 카페 로고랑 nav 메뉴 */
+        display: flex;
+        flex-direction: column; /* 세로 배치 */
+        justify-content: space-between; /* 균등한 간격 */
+        /* border: 1px solid red; */
+    }
+    .page-title { /* we'll make~ 큰 글씨 부분 */
+        font-size: 2rem; /* 5rem => 2rem으로 글자크기 줄이기 */ /* 추가4 */
+        font-family: 'Philosopher';
+        text-transform: uppercase;
+        font-weight: normal;
+    }
+    /* 추가 5.main-nav */
+    .main-nav {
+        display: flex; /* 가로 정렬 */
+        list-style: none; /*li점 없애기 */
+        font-size: 1rem; /* rem:웹 브라우저 기본 글씨크기(16px) */
+        text-transform: uppercase; /* 알파벳 대문자로 변환 */
+        margin: 16px auto;
+        
+        width: 300px; /* 추가1 */
+        justify-content: space-around; /* 추가2 */
+    }
+}
+
