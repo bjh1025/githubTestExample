@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>201910105</title>
+  <!-- CSS 초기화 -->
+  <link href="style1.css" rel="stylesheet" type="text/css" />
+</head>
+<script type="text/javascript" src="test.js"></script>
+
+<body>
+  <div id="home" class='intro_bjh'>
+    <header class="page-header wrapper">
+      <h1><a href="index.html"><img class='logo' src="title.jpg" alt="과제테스트"></a></h1>
+      <nav>
+        <ul class='main-nav'>
+          <li><a href="home.html">순위 확인</a></li>
+          <li><a href="batting.html">Cloud</a></li>
+          <li><a href="batting.html">Computing</a></li>
+          <li><a href="batting.html">Test</a></li>
+          <li><a href="batting.html">html</a></li>
+        </ul>
+      </nav>
+    </header>
+  <table class="table">
+    <thead>
+      <th><td>세부검색 조건 설정1<br>(항목별 1개 필수선택)<td></td></td></th>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="radio" name="league" value="premier">프리미어리그</td>
+        <td><input type="radio" name="league" value="laliga">라리가</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><input type="radio" name="homewinrate" value="0" id="home1">홈 팀 승률 33%이하</td>
+        <td><input type="radio" name="homewinrate" value="34" id="home2">홈 팀 승률 34~66%</td>
+        <td><input type="radio" name="homewinrate" value="67" id="home3">홈 팀 승률 67%이상</td>
+      </tr>
+      <tr>
+        <td><input type="radio" name="awaywinrate" value="0" id="away1">원정 팀 승률 33%이하</td>
+        <td><input type="radio" name="awaywinrate" value="34" id="away2">원정 팀 승률 34~66%</td>
+        <td><input type="radio" name="awaywinrate" value="67" id="away3">원정 팀 승률 67%이상</td>
+      </tr>
+      <tr><td><td><button onclick="showlist();">검색<td></td></button></td></td></tr>
+      
+    </tbody>
+  </table>
+
+  <table class="table2">
+    <thead>
+      <th><td>세부검색 조건 설정2<br>(한개의 조건이라도 해당 시 모두표시)<td></td></td></th>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="radio" name="league1" value="premier">프리미어리그</td>
+        <td><input type="radio" name="league1" value="laliga">라리가</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><input type="radio" name="homewinrate1" value="0" id="home11">홈 팀 승률 33%이하</td>
+        <td><input type="radio" name="homewinrate1" value="34" id="home12">홈 팀 승률 34~66%</td>
+        <td><input type="radio" name="homewinrate1" value="67" id="home13">홈 팀 승률 67%이상</td>
+      </tr>
+      <tr>
+        <td><input type="radio" name="awaywinrate1" value="0" id="away11">원정 팀 승률 33%이하</td>
+        <td><input type="radio" name="awaywinrate1" value="34" id="away12">원정 팀 승률 34~66%</td>
+        <td><input type="radio" name="awaywinrate1" value="67" id="away13">원정 팀 승률 67%이상</td>
+      </tr>
+      <tr>
+        <td><input type="radio" name="batrate1" value="0">배당률 1.60이하</td>
+        <td><input type="radio" name="batrate1" value="1.61">배당률 1.61~2.79</td>
+        <td><input type="radio" name="batrate1" value="2.80">배당률 2.80이상</td>
+      </tr>
+      <tr><td><td><button onclick="showlist1();">검색<td></td></button></td></td></tr>
+    </tbody>
+  </table>
+
+  <table class="notice">
+    <thead>
+    <th>버튼 초기화 원할시 페이지 새로고침 부탁드립니다</th>
+  </thead>
+</table>
+  <table border="0" class="table1">
+    <thead>
+      <tr>
+        <th>매치</th>
+        <th>리그</th>
+        <th>홈팀 승률</th>
+        <th>원정팀 승률</th>
+        <th>홈 승 배당</th>
+        <th>무승부 배당</th>
+        <th>홈 패 배당</th>
+      </tr>
+      <tbody id="tablebody"></tbody>
+    </thead>
+  </table>
+</body>
+
+</html>
