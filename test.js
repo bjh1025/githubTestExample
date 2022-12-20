@@ -248,13 +248,5 @@ function showlist1() {
         table.innerHTML += row
     }
 
-
 }
-
-  //function radiobtnDisabled1()  {
-   // var target1 = document.getElementById('away1');
-    //var target2 = document.getElementById('away2');
-    //var target3 = document.getElementById('away3');
-    //target1.disabled = true; target2.disabled = true; target3.disabled = true;
- // }
 
