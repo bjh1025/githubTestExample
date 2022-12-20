@@ -13,6 +13,7 @@
 <body>
   <script type="text/javascript"></script>
   <div id="home" class='intro_bjh'>
+    <!-- header부분 설정 -->
     <header class="page-header wrapper">
       <h1><a href="index.html"><img class='logo' src="title.jpg" alt="과제테스트"></a></h1>
       <nav>
@@ -26,14 +27,15 @@
       </nav>
     </header>
     <div id="main_button">
+      <!-- 현재 서울의 날씨 정보 테이블 설정(OPEN API 활용) -->
       <table class="table3">
         <thead>
           <tr>
-            <th>시간 및 현재 날씨 정보</th>
+            <th>현재 날씨 정보</th>
             <th class="ctemp">현재 온도:</th>
             <th class="lowtemp">최저 온도:</th>
             <th class="hightemp">현재 온도:</th>
-            <th class="icon">날씨 기호:</th>
+            <th class="icon"></th>
           </tr>
         </thead>
       </table>
@@ -43,7 +45,7 @@
         integrity="sha256-pkn2CUZmheSeyssYw3vMp1+xyub4m+e+QK4sQskvuo4=" 
         crossorigin="anonymous">
       </script>
-
+      <!-- API연동해서 현재 온도, 최저 온도, 최고 온도, 날씨 기호 아이콘 가져오기 -->
       <script>
            $.getJSON('https://api.openweathermap.org/data/2.5/weather?q=Seoul&appid=d66211bfe5ac27b5f6662a13a623a425&units=metric',
            function(result) { 
@@ -57,8 +59,11 @@
             $('.icon').html(winconUrl);
           });          
       </script>
+      <!-- 세부 검색 조건 설정하는 페이지로 넘어가는 버튼 구현 -->
       <button id="main_btn1" class="main_btn1"onClick="location.href='test1.html'">세부 검색 조건 설정</button>
       <button id="main_btn2" class="main_btn2">조합 추천 기능</button>
+      
+      <!-- 임의의 매치 리스트 20개 설정 -->
       <table border="0" class="table1">
         <thead>
           <tr>
@@ -296,6 +301,7 @@
           </tr>
         </tbody>
       </table>
+      <!-- 매치 리스트에서 선택 시 선택 정보 및 배당률 및 입력한 배팅금액에 대한 예상 당첨금 확인 기능  -->
       <table class="table2">
         <form>
           <thead>
@@ -314,7 +320,10 @@
           </tbody>
           <td><input type="button" onclick="ratehap()" ; value="배당률 계산하기"></td>
           <tr>
-            <td>예상 배당률<input type="text" id="totalrate" value="          ->"></td>
+            <td>예상 배당률</td>
+          </tr>
+          <tr>
+            <td><input type="text" id="totalrate"></td>
           </tr>
           <tr>
             <td>희망 배팅금액:<input type="text" id="invest"></td>
@@ -323,15 +332,15 @@
             <td><input type="button" onclick="getmoney()" ; value="예상 당첨금 확인"></td>
           </tr>
           <tr>
-            <td>예상 당첨금액:<input type="text" id="daebak"></td>
+            <td>예상 당첨금액:<input type="text" id="daebak">원</td>
           </tr>
           <tr>
+            <!-- 결제 기능은 구현하지 않음 -->
             <td><button id="pay_btn" class="pay_btn">결제</button>
           </tr>
         </form>
       </table> 
 
-      
 </body>
 
 </html>
