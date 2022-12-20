@@ -1,5 +1,25 @@
+// 경기 목록 20개에 대한 배당률 값 1로 설정
 n1 = "1"; n2 = "1"; n3 = "1"; n4 = "1"; n5 = "1"; n6 = "1"; n7 = "1"; n8 = "1"; n9 = "1"; n10 = "1";
 n11 = "1"; n12 = "1"; n13 = "1"; n14 = "1"; n15 = "1"; n16 = "1"; n17 = "1"; n18 = "1"; n19 = "1"; n20 = "1";
+
+// 선택한 경기에 해당하는 배당률을 전부 곱하여 총 배당률을 구함(최대 10개까지 선택 가능)
+function ratehap() {
+  var totalrate = n1 * n2 * n3 * n4 * n5 * n6 * n7 * n8 * n9 * n10
+  n11 * n12 * n13 * n14 * n15 * n16 * n17 * n18 * n19 * n20;
+  var totalrate2 = Math.round(totalrate * 10) / 10;
+  document.getElementById("totalrate").value = totalrate2;
+}
+// 총 배당률에 사용자가 입력한 금액을 곱하여 예상 당첨금 출력
+function getmoney() {
+  var investmoney = document.getElementById("invest").value;
+  var totalrate = n1 * n2 * n3 * n4 * n5 * n6 * n7 * n8 * n9 * n10
+  n11 * n12 * n13 * n14 * n15 * n16 * n17 * n18 * n19 * n20;
+  var totalrate2 = Math.round(totalrate * 10) / 10;
+  document.getElementById("daebak").value = investmoney * totalrate2;
+}
+
+// 경기 목록 중 선택한 홈팀에 승,무,패에 대한 배당률과 내용 선택 목록에 출력 + 선택한 경기는 버튼 비활성화 + 선택 개수가 10개 이상이면 추가 불가
+// 임의로 설정한 20개의 각 승무패 정보 60경우에 대해 설정
 function add1() {
   var plusUl = document.createElement('ul');
   var plusUl = document.createElement('button');
@@ -48,6 +68,7 @@ function add3() {
   } else if (a.childElementCount > 10)
     alert('선택 최대개수는 10개입니다.');
 }
+//  선택한 목록에서 텍스트 누르면 삭제하고 해당 경기 버튼 활성화 
 function deleteList1(event) {
   var deleteElement = event.target.parentElement;
   deleteElement.remove();
@@ -1134,16 +1155,4 @@ function deleteList20(event) {
   target1.disabled = false; target2.disabled = false; target3.disabled = false;
 }
 
-function ratehap() {
-  var totalrate = n1 * n2 * n3 * n4 * n5 * n6 * n7 * n8 * n9 * n10
-  n11 * n12 * n13 * n14 * n15 * n16 * n17 * n18 * n19 * n20;
-  var totalrate2 = Math.round(totalrate * 10) / 10;
-  document.getElementById("totalrate").value = totalrate2;
-}
-function getmoney() {
-  var investmoney = document.getElementById("invest").value;
-  var totalrate = n1 * n2 * n3 * n4 * n5 * n6 * n7 * n8 * n9 * n10
-  n11 * n12 * n13 * n14 * n15 * n16 * n17 * n18 * n19 * n20;
-  var totalrate2 = Math.round(totalrate * 10) / 10;
-  document.getElementById("daebak").value = investmoney * totalrate2;
-}
+
