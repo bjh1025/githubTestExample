@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>201910105</title>
+  <!-- CSS 초기화 -->
+  <link href="style1.css" rel="stylesheet" type="text/css" />
+</head>
+<script type="text/javascript" src="lank.js"></script>
+
+<body>
+   <!-- header부분 설정 -->
+  <div id="home" class='intro_bjh'>
+    <header class="page-header wrapper">
+      <h1><a href="index.html"><img class='logo' src="title.jpg" alt="과제테스트"></a></h1>
+      <nav>
+        <ul class='main-nav'>
+          <li><a href="home.html">HS</a></li>
+          <li><a href="batting.html">Cloud</a></li>
+          <li><a href="batting.html">Computing</a></li>
+          <li><a href="batting.html">Test</a></li>
+          <li><a href="batting.html">html</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- 세부 검색조건 설정1 테이블과 조건들 라디오버튼으로 구현(항목별 1개 필수 선택하여 해당하는 경기 목록 표시)-->
+  <table class="table3">
+    <thead>
+      <th><td>리그 순위<td></td></td></th>
+    </thead>
+    <tbody>
+        <!-- 프리미어리그와 라리가, 분데스리가 구현하였음 -->
+      <tr>
+        <td><input type="radio" name="league" value="premier">프리미어리그</td>
+        <td><input type="radio" name="league" value="laliga">라리가</td>
+        <td><input type="radio" name="league" value="bundes">분데스리가</td>
+      </tr>
+      <tr><td><td><button onclick="showlank();">순위 확인<td></td></button></td></td></tr>
+      
+    </tbody>
+  </table>
+
+  <!-- 리그 선택후 버튼 클릭시 해당 리그 순위 목록 나오는 테이블 -->
+  <table border="0" class="table4">
+    <thead>
+      <tr>
+        <th>순위</th>
+        <th>팀명</th>
+        <th>리그</th>
+        <th>경기 수</th>
+        <th>승</th>
+        <th>무</th>
+        <th>패</th>
+        <th>득점</th>
+        <th>실점</th>
+        <th>승점</th>
+      </tr>
+      <tbody id="tablebody2"></tbody>
+    </thead>
+  </table>
+</body>
