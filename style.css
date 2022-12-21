@@ -136,6 +136,9 @@ li {
     width:100%
 }
 
+.invest{
+    background-color: black;
+}
 
 .intro_bjh {
     background-size: cover; /* 이미지 가로-세로 비율을 유지하며 화면에 채우기 */
