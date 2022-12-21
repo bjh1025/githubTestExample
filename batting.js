@@ -17,6 +17,10 @@ function getmoney() {
   var totalrate2 = Math.round(totalrate * 10) / 10;
   document.getElementById("daebak").value = investmoney * totalrate2;
 }
+// 결제 기능 클릭 시
+function finish(){
+  alert("미구현 기능입니다.");
+}
 
 // 경기 목록 중 선택한 홈팀에 승,무,패에 대한 배당률과 내용 선택 목록에 출력 + 선택한 경기는 버튼 비활성화 + 선택 개수가 10개 이상이면 추가 불가
 // 임의로 설정한 20개의 각 승무패 정보 60경우에 대해 설정
