@@ -97,36 +97,17 @@ function showlist() {
                result.push(i);
             }}
             else if(i.homewinrate >= 67 && i.awaywinrate>=34 && i.awaywinrate<=66){    
+                if(homewinrate == 67 && awaywinrate == 34){
+               result.push(i);
+            }} 
+            else if(i.homewinrate >= 67 && i.awaywinrate>=67){    
                 if(homewinrate == 67 && awaywinrate == 67){
                result.push(i);
-            }}
-                
+            }} 
+            
     }
 }
     
-    for (let i of matchlist) {
-        if (i.league == league) {
-            if (winbat == 0 && i.winbat <= 1.60) {
-                result.push(i);
-            } else if (winbat == 1.61 && 1.61 <= i.winbat && i.winbat <= 2.79) {
-                result.push(i);
-            } else if (winbat == 2.80 && i.winbat >= 2.80) {
-                result.push(i);
-            } else if (drawbat == 0 && i.drawbat <= 1.60) {
-                result.push(i);
-            } else if (drawbat == 1.61 && 1.61 <= i.drawbat && i.drawbat <= 2.79) {
-                result.push(i);
-            } else if (drawbat == 2.80 && i.drawbat >= 2.80) {
-                result.push(i);
-            } else if (losebat == 0 && i.losebat <= 1.60) {
-                result.push(i);
-            } else if (losebat == 1.61 && 1.61 <= i.losebat && i.losebat <= 2.79) {
-                result.push(i);
-            } else if (losebat == 2.80 && i.losebat >= 2.80) {
-                result.push(i);
-            }
-        }
-    }
     let result1 = [...new Set(result)];
     for (let i of result1) {
         var row =
@@ -141,9 +122,12 @@ function showlist() {
               </tr>`
         table.innerHTML += row
     }
+    
 
 
 }
+
+// 세부 검색조건 설정2 
 function showlist1() {
     const table = document.getElementById('tablebody');
     table.innerHTML = "";
